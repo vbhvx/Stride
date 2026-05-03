@@ -1,0 +1,946 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// -------------------------------------------------------------
+// Enums
+// -------------------------------------------------------------
+
+enum SystemRole {
+  EMPLOYEE
+  MANAGER
+  HR_ADMIN
+  REVIEWER
+  ORG_ADMIN
+}
+
+enum VersionStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+enum CompetencyCategory {
+  TECHNICAL_PROBLEM_SOLVING
+  SYSTEM_DESIGN
+  SOFTWARE_QUALITY
+  COMMUNICATION
+  COLLABORATION
+  OWNERSHIP
+  DELIVERY_AND_PLANNING
+  MENTORING
+  DOMAIN_KNOWLEDGE
+  PRODUCT_UNDERSTANDING
+}
+
+enum GoalCategory {
+  SKILL_DEVELOPMENT
+  TECHNICAL_DELIVERY
+  SYSTEM_IMPROVEMENT
+  MENTORSHIP
+  PROCESS_IMPROVEMENT
+  COLLABORATION
+}
+
+enum GoalMeasurementMethod {
+  QUALITATIVE_MILESTONES
+  QUANTITATIVE_METRIC
+}
+
+enum GoalStatus {
+  DRAFT
+  PROPOSED
+  AGREED
+  IN_PROGRESS
+  COMPLETED
+  PAUSED
+  REVISED
+  CANCELLED
+}
+
+enum EvidenceType {
+  PROJECT_DELIVERABLE
+  DESIGN_DOCUMENT
+  CODE_CONTRIBUTION
+  TECHNICAL_DECISION
+  COMPLETED_MILESTONE
+  PRODUCT_OUTCOME
+  WRITTEN_FEEDBACK
+  MENTORING_CONTRIBUTION
+  INCIDENT_RESOLUTION
+  QUALITY_IMPROVEMENT
+  CROSS_TEAM_COLLABORATION
+  LEARNING_EXPERIMENTATION
+  OTHER
+}
+
+enum EvidenceSourceType {
+  EMPLOYEE_ENTERED
+  MANAGER_OBSERVED
+  PEER_FEEDBACK
+  INTEGRATION_IMPORTED
+  SYSTEM_CALCULATED
+  AI_GENERATED_SUMMARY
+  VERIFIED_ARTIFACT
+}
+
+enum VisibilityClassification {
+  SHARED_EMPLOYEE_MANAGER
+  RESTRICTED_MANAGER_ONLY
+  RESTRICTED_HR_ONLY
+}
+
+enum VerificationStatus {
+  UNVERIFIED_CLAIM
+  SELF_REPORTED
+  PEER_CONFIRMED
+  MANAGER_VERIFIED
+  EXTERNALLY_VALIDATED
+}
+
+enum FeedbackType {
+  COACHING
+  PEER_FEEDBACK
+  MANAGER_ASSESSMENT
+  RECOGNITION
+  UPWARD_FEEDBACK
+}
+
+enum AcknowledgementStatus {
+  PENDING
+  ACKNOWLEDGED_AGREED
+  ACKNOWLEDGED_WITH_CLARIFICATION
+  ACKNOWLEDGED_DISPUTED
+}
+
+enum CoachingFollowUpStatus {
+  SCHEDULED
+  IN_PROGRESS
+  COMPLETED
+  DEFERRED
+}
+
+enum DevelopmentPlanStatus {
+  DRAFT
+  ACTIVE
+  ON_TRACK
+  NEEDS_ADJUSTMENT
+  COMPLETED
+  ARCHIVED
+}
+
+enum DevelopmentActionType {
+  LEARNING_MODULE
+  SYSTEM_DESIGN_REVIEW
+  SCOPED_DELIVERABLE
+  PAIRING_WITH_COLLEAGUE
+  LEADING_REVIEW
+  WRITING_DOCUMENTATION
+  PRACTICING_SPECIFIC_SKILL
+  RECEIVING_STRUCTURED_FEEDBACK
+}
+
+enum DevelopmentActionStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+  PAUSED
+  CANCELLED
+}
+
+enum ReviewCycleType {
+  QUARTERLY
+  SEMIANNUAL
+  ANNUAL
+  AD_HOC
+}
+
+enum ReviewCycleStatus {
+  UPCOMING
+  ACTIVE
+  IN_SELF_REVIEW
+  IN_MANAGER_REVIEW
+  CALIBRATION
+  COMPLETED
+  CLOSED
+}
+
+enum ReviewStatus {
+  DRAFT_SELF_REVIEW
+  SUBMITTED_SELF_REVIEW
+  MANAGER_IN_PROGRESS
+  SUBMITTED_MANAGER_REVIEW
+  RETURNED_FOR_REVISION
+  FINALIZED
+  AMENDED
+}
+
+enum AssessmentRating {
+  EXCEEDS_EXPECTATIONS
+  MEETS_EXPECTATIONS
+  APPROACHING_EXPECTATIONS
+  NEEDS_DEVELOPMENT
+  INSUFFICIENT_EVIDENCE
+}
+
+enum ReviewResponseType {
+  ACKNOWLEDGEMENT_ONLY
+  ACKNOWLEDGEMENT_WITH_AGREEMENT
+  CLARIFICATION_NOTE
+  FACTUAL_CORRECTION
+  FORMAL_DISAGREEMENT
+}
+
+enum CareerConversationStatus {
+  DRAFT
+  COMPLETED
+  FOLLOW_UP_PENDING
+}
+
+enum AITaskType {
+  GOAL_SUMMARY
+  FEEDBACK_SUMMARY
+  DEVELOPMENT_PLAN_DRAFT
+  REVIEW_SUMMARY
+  SKILL_GAP_ANALYSIS
+}
+
+enum AIStatus {
+  SUCCESS
+  FAILED
+  FALLBACK_USED
+}
+
+enum AIHumanFeedbackStatus {
+  PENDING_REVIEW
+  ADOPTED_VERBATIM
+  EDITED_AND_ADOPTED
+  REJECTED
+}
+
+enum AuditAction {
+  CREATE
+  UPDATE
+  DELETE
+  SUBMIT
+  RETURN
+  FINALIZE
+  AMEND
+  EXPORT
+  CORRECTION_REQUEST
+  DELETION_REQUEST
+}
+
+enum PrivacyRequestType {
+  DATA_EXPORT
+  CORRECTION
+  DELETION
+}
+
+enum PrivacyRequestStatus {
+  PENDING
+  IN_REVIEW
+  COMPLETED
+  REJECTED
+}
+
+enum NotificationType {
+  REVIEW_DEADLINE
+  GOAL_UPDATE_REQUEST
+  FEEDBACK_RECEIVED
+  COACHING_REMINDER
+  AUDIT_NOTICE
+}
+
+// -------------------------------------------------------------
+// Models
+// -------------------------------------------------------------
+
+model Organization {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  memberships         OrganizationMembership[]
+  teams               Team[]
+  roleProfiles        RoleProfile[]
+  competencies        Competency[]
+  goals               Goal[]
+  evidenceRecords     EvidenceRecord[]
+  feedbackRecords     FeedbackRecord[]
+  coachingSessions    CoachingSession[]
+  developmentPlans    DevelopmentPlan[]
+  reviewCycles        ReviewCycle[]
+  careerConversations CareerConversation[]
+  aiAnalysisRuns      AIAnalysisRun[]
+  notifications       Notification[]
+  auditEvents         AuditEvent[]
+  privacyRequests     PrivacyRequest[]
+
+  @@map("organizations")
+}
+
+model User {
+  id         String   @id @default(cuid())
+  email      String   @unique
+  name       String
+  avatarUrl  String?
+  title      String?
+  department String?
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  memberships           OrganizationMembership[]
+  ownedGoals            Goal[]                   @relation("GoalOwner")
+  managedGoals          Goal[]                   @relation("GoalManager")
+  goalUpdates           GoalUpdate[]
+  contributedEvidence   EvidenceRecord[]         @relation("EvidenceContributor")
+  authoredEvidence      EvidenceRecord[]         @relation("EvidenceAuthor")
+  verifiedEvidence      EvidenceRecord[]         @relation("EvidenceVerifier")
+  authoredFeedback      FeedbackRecord[]         @relation("FeedbackAuthor")
+  receivedFeedback      FeedbackRecord[]         @relation("FeedbackRecipient")
+  coachingAsManager     CoachingSession[]        @relation("CoachingManager")
+  coachingAsEmployee    CoachingSession[]        @relation("CoachingEmployee")
+  developmentPlans      DevelopmentPlan[]        @relation("PlanEmployee")
+  reviewedPlans         DevelopmentPlan[]        @relation("PlanReviewer")
+  reviewsAsEmployee     Review[]                 @relation("ReviewEmployee")
+  reviewsAsManager      Review[]                 @relation("ReviewManager")
+  reviewAssessments     ReviewAssessment[]
+  reviewResponses       ReviewResponse[]
+  privacyRequests       PrivacyRequest[]
+  notifications         Notification[]
+  auditEvents           AuditEvent[]
+  careerAsEmployee      CareerConversation[]     @relation("CareerEmployee")
+  careerAsManager       CareerConversation[]     @relation("CareerManager")
+  aiRuns                AIAnalysisRun[]
+
+  @@map("users")
+}
+
+model OrganizationMembership {
+  id             String      @id @default(cuid())
+  organizationId String
+  userId         String
+  teamId         String?
+  roleProfileId  String?
+  systemRole     SystemRole  @default(EMPLOYEE)
+  managerId      String?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  team         Team?        @relation(fields: [teamId], references: [id], onDelete: SetNull)
+  roleProfile  RoleProfile? @relation(fields: [roleProfileId], references: [id], onDelete: SetNull)
+
+  @@unique([organizationId, userId])
+  @@index([organizationId, systemRole])
+  @@map("organization_memberships")
+}
+
+model Team {
+  id             String   @id @default(cuid())
+  organizationId String
+  name           String
+  description    String?
+  department     String?
+  leadId         String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization Organization             @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  memberships  OrganizationMembership[]
+
+  @@index([organizationId])
+  @@map("teams")
+}
+
+model RoleProfile {
+  id                         String   @id @default(cuid())
+  organizationId             String
+  title                      String
+  jobFamily                  String
+  level                      String
+  purpose                    String
+  scope                      String?
+  technicalExpectations      String?
+  collaborationExpectations  String?
+  activeVersionNumber        Int      @default(1)
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+
+  organization               Organization             @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  versions                   RoleProfileVersion[]
+  competencyExpectations     CompetencyExpectation[]
+  memberships                OrganizationMembership[]
+  targetCareerConversations  CareerConversation[]     @relation("TargetRoleCareer")
+  currentCareerConversations CareerConversation[]     @relation("CurrentRoleCareer")
+  developmentPlans           DevelopmentPlan[]
+
+  @@index([organizationId, jobFamily])
+  @@map("role_profiles")
+}
+
+model RoleProfileVersion {
+  id            String        @id @default(cuid())
+  roleProfileId String
+  versionNumber Int
+  effectiveDate DateTime      @default(now())
+  status        VersionStatus @default(ACTIVE)
+  changeLog     String?
+  approvedBy    String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  roleProfile  RoleProfile             @relation(fields: [roleProfileId], references: [id], onDelete: Cascade)
+  expectations CompetencyExpectation[]
+  reviews      Review[]
+
+  @@unique([roleProfileId, versionNumber])
+  @@map("role_profile_versions")
+}
+
+model Competency {
+  id             String             @id @default(cuid())
+  organizationId String
+  category       CompetencyCategory
+  title          String
+  description    String
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+
+  organization       Organization            @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  expectations       CompetencyExpectation[]
+  evidenceLinks      EvidenceLink[]
+  developmentActions DevelopmentAction[]
+  reviewAssessments  ReviewAssessment[]
+  goals              Goal[]
+  feedbackRecords    FeedbackRecord[]
+
+  @@index([organizationId, category])
+  @@map("competencies")
+}
+
+model CompetencyExpectation {
+  id                   String   @id @default(cuid())
+  competencyId         String
+  roleProfileId        String?
+  roleProfileVersionId String?
+  level                String
+  description          String
+  observableBehavior   String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  competency         Competency          @relation(fields: [competencyId], references: [id], onDelete: Cascade)
+  roleProfile        RoleProfile?        @relation(fields: [roleProfileId], references: [id], onDelete: SetNull)
+  roleProfileVersion RoleProfileVersion? @relation(fields: [roleProfileVersionId], references: [id], onDelete: SetNull)
+  reviewAssessments  ReviewAssessment[]
+
+  @@index([competencyId, level])
+  @@map("competency_expectations")
+}
+
+model Goal {
+  id                         String                @id @default(cuid())
+  organizationId             String
+  ownerId                    String
+  managerId                  String?
+  title                      String
+  description                String
+  category                   GoalCategory
+  linkedCompetencyId         String?
+  definitionOfSuccess        String
+  baselineState              String?
+  targetOutcome              String
+  measurementMethod          GoalMeasurementMethod @default(QUALITATIVE_MILESTONES)
+  currentProgress            Int                   @default(0) // 0 to 100
+  startDate                  DateTime
+  dueDate                    DateTime
+  status                     GoalStatus            @default(AGREED)
+  changeRationale            String?
+  dependenciesAndConstraints String?
+  createdAt                  DateTime              @default(now())
+  updatedAt                  DateTime              @updatedAt
+
+  organization     Organization     @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  owner            User             @relation("GoalOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  manager          User?            @relation("GoalManager", fields: [managerId], references: [id], onDelete: SetNull)
+  linkedCompetency Competency?      @relation(fields: [linkedCompetencyId], references: [id], onDelete: SetNull)
+  milestones       GoalMilestone[]
+  updates          GoalUpdate[]
+  evidenceLinks    EvidenceLink[]
+  feedbackRecords  FeedbackRecord[]
+
+  @@index([organizationId, ownerId, status])
+  @@map("goals")
+}
+
+model GoalMilestone {
+  id          String    @id @default(cuid())
+  goalId      String
+  title       String
+  description String?
+  dueDate     DateTime?
+  isCompleted Boolean   @default(false)
+  completedAt DateTime?
+  evidenceId  String?
+  order       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  goal Goal @relation(fields: [goalId], references: [id], onDelete: Cascade)
+
+  @@index([goalId])
+  @@map("goal_milestones")
+}
+
+model GoalUpdate {
+  id                 String   @id @default(cuid())
+  goalId             String
+  authorId           String
+  progressPercentage Int?
+  updateText         String
+  learnings          String?
+  blockers           String?
+  scopeChanges       String?
+  nextSteps          String?
+  assistanceNeeded   String?
+  createdAt          DateTime @default(now())
+
+  goal   Goal @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  author User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([goalId])
+  @@map("goal_updates")
+}
+
+model EvidenceRecord {
+  id                   String                   @id @default(cuid())
+  organizationId       String
+  contributorId        String
+  authorId             String
+  title                String
+  description          String
+  evidenceType         EvidenceType
+  sourceType           EvidenceSourceType       @default(EMPLOYEE_ENTERED)
+  sourceUrl            String?
+  artifactRef          String?
+  artifactSize         Int?
+  artifactMime         String?
+  contextScope         String?
+  teamContributions    String?
+  personalContribution String?
+  complexity           String?
+  observableOutcome    String?
+  visibility           VisibilityClassification @default(SHARED_EMPLOYEE_MANAGER)
+  verificationStatus   VerificationStatus       @default(UNVERIFIED_CLAIM)
+  verifiedById         String?
+  verifiedAt           DateTime?
+  verificationNotes    String?
+  createdAt            DateTime                 @default(now())
+  updatedAt            DateTime                 @updatedAt
+
+  organization Organization          @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  contributor  User                  @relation("EvidenceContributor", fields: [contributorId], references: [id], onDelete: Cascade)
+  author       User                  @relation("EvidenceAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+  verifier     User?                 @relation("EvidenceVerifier", fields: [verifiedById], references: [id], onDelete: SetNull)
+  links        EvidenceLink[]
+  aiReferences AIEvidenceReference[]
+
+  @@index([organizationId, contributorId])
+  @@map("evidence_records")
+}
+
+model EvidenceLink {
+  id                   String   @id @default(cuid())
+  evidenceId           String
+  goalId               String?
+  competencyId         String?
+  reviewAssessmentId   String?
+  careerConversationId String?
+  explanation          String
+  authorId             String
+  createdAt            DateTime @default(now())
+
+  evidence         EvidenceRecord    @relation(fields: [evidenceId], references: [id], onDelete: Cascade)
+  goal             Goal?             @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  competency       Competency?       @relation(fields: [competencyId], references: [id], onDelete: Cascade)
+  reviewAssessment ReviewAssessment? @relation(fields: [reviewAssessmentId], references: [id], onDelete: Cascade)
+
+  @@index([evidenceId])
+  @@index([goalId])
+  @@index([competencyId])
+  @@map("evidence_links")
+}
+
+model FeedbackRecord {
+  id                    String                   @id @default(cuid())
+  organizationId        String
+  authorId              String
+  recipientId           String
+  reviewPeriod          String?
+  linkedGoalId          String?
+  linkedCompetencyId    String?
+  feedbackType          FeedbackType             @default(COACHING)
+  specificObservation   String
+  context               String
+  observableImpact      String
+  suggestedNextAction   String
+  visibility            VisibilityClassification @default(SHARED_EMPLOYEE_MANAGER)
+  acknowledgementStatus AcknowledgementStatus    @default(PENDING)
+  employeeResponseText  String?
+  responseSubmittedAt   DateTime?
+  createdAt             DateTime                 @default(now())
+  updatedAt             DateTime                 @updatedAt
+
+  organization     Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  author           User         @relation("FeedbackAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+  recipient        User         @relation("FeedbackRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
+  linkedGoal       Goal?        @relation(fields: [linkedGoalId], references: [id], onDelete: SetNull)
+  linkedCompetency Competency?  @relation(fields: [linkedCompetencyId], references: [id], onDelete: SetNull)
+
+  @@index([organizationId, recipientId])
+  @@map("feedback_records")
+}
+
+model CoachingSession {
+  id                        String                 @id @default(cuid())
+  organizationId            String
+  managerId                 String
+  employeeId                String
+  sessionDate               DateTime
+  discussionTopics          String
+  progressNotes             String?
+  achievementsAndChallenges String?
+  questionsAndBlockers      String?
+  agreedDevelopmentActions  String?
+  sharedNotes               String
+  restrictedManagerNotes    String?
+  followUpDate              DateTime?
+  followUpStatus            CoachingFollowUpStatus @default(SCHEDULED)
+  createdAt                 DateTime               @default(now())
+  updatedAt                 DateTime               @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  manager      User         @relation("CoachingManager", fields: [managerId], references: [id], onDelete: Cascade)
+  employee     User         @relation("CoachingEmployee", fields: [employeeId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, employeeId, managerId])
+  @@map("coaching_sessions")
+}
+
+model DevelopmentPlan {
+  id                     String                @id @default(cuid())
+  organizationId         String
+  employeeId             String
+  reviewerId             String?
+  title                  String
+  objective              String
+  targetRoleProfileId    String?
+  currentEvidenceSummary String?
+  desiredCapability      String
+  supportNeeded          String?
+  evidenceCollectionPlan String?
+  status                 DevelopmentPlanStatus @default(ACTIVE)
+  startDate              DateTime
+  targetCompletionDate   DateTime
+  checkpointFrequency    String?               @default("Bi-weekly")
+  nextReviewCheckpoint   DateTime?
+  revisionReason         String?
+  createdAt              DateTime              @default(now())
+  updatedAt              DateTime              @updatedAt
+
+  organization      Organization        @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  employee          User                @relation("PlanEmployee", fields: [employeeId], references: [id], onDelete: Cascade)
+  reviewer          User?               @relation("PlanReviewer", fields: [reviewerId], references: [id], onDelete: SetNull)
+  targetRoleProfile RoleProfile?        @relation(fields: [targetRoleProfileId], references: [id], onDelete: SetNull)
+  actions           DevelopmentAction[]
+
+  @@index([organizationId, employeeId])
+  @@map("development_plans")
+}
+
+model DevelopmentAction {
+  id                      String                  @id @default(cuid())
+  developmentPlanId       String
+  title                   String
+  actionType              DevelopmentActionType
+  description             String
+  linkedCompetencyId      String?
+  successCriteria         String
+  practicalWorkAssignment String?
+  mentoringCommitment     String?
+  targetDate              DateTime
+  status                  DevelopmentActionStatus @default(NOT_STARTED)
+  outcomeEvidence         String?
+  completedAt             DateTime?
+  order                   Int                     @default(0)
+  createdAt               DateTime                @default(now())
+  updatedAt               DateTime                @updatedAt
+
+  developmentPlan  DevelopmentPlan @relation(fields: [developmentPlanId], references: [id], onDelete: Cascade)
+  linkedCompetency Competency?     @relation(fields: [linkedCompetencyId], references: [id], onDelete: SetNull)
+
+  @@index([developmentPlanId])
+  @@map("development_actions")
+}
+
+model ReviewCycle {
+  id                           String            @id @default(cuid())
+  organizationId               String
+  title                        String
+  cycleType                    ReviewCycleType   @default(QUARTERLY)
+  startDate                    DateTime
+  endDate                      DateTime
+  selfReviewDeadline           DateTime
+  managerReviewDeadline        DateTime
+  status                       ReviewCycleStatus @default(ACTIVE)
+  requiredCompetencyCategories String?
+  allowDisputeAcknowledgement  Boolean           @default(true)
+  createdAt                    DateTime          @default(now())
+  updatedAt                    DateTime          @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  reviews      Review[]
+
+  @@index([organizationId, status])
+  @@map("review_cycles")
+}
+
+model Review {
+  id                               String        @id @default(cuid())
+  reviewCycleId                    String
+  employeeId                       String
+  managerId                        String
+  roleProfileVersionId             String?
+  status                           ReviewStatus  @default(DRAFT_SELF_REVIEW)
+  selfSummary                      String?
+  selfGrowthEvidence               String?
+  selfChallenges                   String?
+  selfLearningOutcomes             String?
+  selfSupportNeeded                String?
+  selfSubmittedAt                  DateTime?
+  managerOverallFeedback           String?
+  managerSummaryStrengths          String?
+  managerSummaryDevelopmentAreas   String?
+  managerSubmittedAt               DateTime?
+  finalizedAt                      DateTime?
+  revisionNotes                    String?
+  createdAt                        DateTime      @default(now())
+  updatedAt                        DateTime      @updatedAt
+
+  reviewCycle        ReviewCycle         @relation(fields: [reviewCycleId], references: [id], onDelete: Cascade)
+  employee           User                @relation("ReviewEmployee", fields: [employeeId], references: [id], onDelete: Cascade)
+  manager            User                @relation("ReviewManager", fields: [managerId], references: [id], onDelete: Cascade)
+  roleProfileVersion RoleProfileVersion? @relation(fields: [roleProfileVersionId], references: [id], onDelete: SetNull)
+  assessments        ReviewAssessment[]
+  responses          ReviewResponse[]
+  versions           ReviewVersion[]
+
+  @@index([reviewCycleId, employeeId])
+  @@index([employeeId, status])
+  @@map("reviews")
+}
+
+model ReviewAssessment {
+  id                       String            @id @default(cuid())
+  reviewId                 String
+  competencyId             String?
+  competencyExpectationId String?
+  expectationText          String
+  observedEvidenceSummary  String
+  assessmentRating         AssessmentRating  @default(MEETS_EXPECTATIONS)
+  assessmentText           String
+  developmentSuggestion    String
+  missingEvidenceContext   String?
+  assessorId               String
+  createdAt                DateTime          @default(now())
+  updatedAt                DateTime          @updatedAt
+
+  review                Review                 @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  competency            Competency?            @relation(fields: [competencyId], references: [id], onDelete: SetNull)
+  competencyExpectation CompetencyExpectation? @relation(fields: [competencyExpectationId], references: [id], onDelete: SetNull)
+  assessor              User                   @relation(fields: [assessorId], references: [id], onDelete: Cascade)
+  evidenceLinks         EvidenceLink[]
+
+  @@index([reviewId])
+  @@map("review_assessments")
+}
+
+model ReviewResponse {
+  id                       String             @id @default(cuid())
+  reviewId                 String
+  responderId              String
+  responseType             ReviewResponseType @default(ACKNOWLEDGEMENT_ONLY)
+  responseText             String
+  acknowledgesReceiptOnly  Boolean            @default(true)
+  disputedPoints           String?
+  factualCorrectionDetails String?
+  submittedAt              DateTime           @default(now())
+
+  review    Review @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  responder User   @relation(fields: [responderId], references: [id], onDelete: Cascade)
+
+  @@index([reviewId])
+  @@map("review_responses")
+}
+
+model ReviewVersion {
+  id              String   @id @default(cuid())
+  reviewId        String
+  versionNumber   Int
+  finalizedById   String
+  snapshotJson    String
+  amendmentReason String?
+  createdAt       DateTime @default(now())
+
+  review Review @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+
+  @@unique([reviewId, versionNumber])
+  @@map("review_versions")
+}
+
+model CareerConversation {
+  id                             String                   @id @default(cuid())
+  organizationId                 String
+  employeeId                     String
+  managerId                      String
+  currentRoleId                  String
+  targetRoleId                   String
+  conversationDate               DateTime                 @default(now())
+  summary                        String
+  supportedStrengths             String
+  missingEvidenceGaps            String
+  suggestedDevelopmentActivities String
+  questionsForNextConversation   String
+  employeeNotes                  String?
+  followUpCheckInDate            DateTime?
+  status                         CareerConversationStatus @default(COMPLETED)
+  createdAt                      DateTime                 @default(now())
+  updatedAt                      DateTime                 @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  employee     User         @relation("CareerEmployee", fields: [employeeId], references: [id], onDelete: Cascade)
+  manager      User         @relation("CareerManager", fields: [managerId], references: [id], onDelete: Cascade)
+  currentRole  RoleProfile  @relation("CurrentRoleCareer", fields: [currentRoleId], references: [id], onDelete: Cascade)
+  targetRole   RoleProfile  @relation("TargetRoleCareer", fields: [targetRoleId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, employeeId])
+  @@map("career_conversations")
+}
+
+model AIAnalysisRun {
+  id                  String                @id @default(cuid())
+  organizationId      String
+  userId              String
+  targetEmployeeId    String?
+  taskType            AITaskType
+  provider            String
+  modelId             String
+  promptTokens        Int?
+  completionTokens    Int?
+  status              AIStatus              @default(SUCCESS)
+  inputSummary        String?
+  outputJson          String
+  humanFeedbackStatus AIHumanFeedbackStatus @default(PENDING_REVIEW)
+  humanFeedbackNotes  String?
+  reviewedAt          DateTime?
+  reviewedById        String?
+  errorMessage        String?
+  createdAt           DateTime              @default(now())
+
+  organization       Organization          @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user               User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  evidenceReferences AIEvidenceReference[]
+
+  @@index([organizationId, targetEmployeeId, taskType])
+  @@map("ai_analysis_runs")
+}
+
+model AIEvidenceReference {
+  id                   String   @id @default(cuid())
+  aiAnalysisRunId      String
+  evidenceId           String
+  claimText            String
+  relevanceExplanation String
+  createdAt            DateTime @default(now())
+
+  aiAnalysisRun AIAnalysisRun  @relation(fields: [aiAnalysisRunId], references: [id], onDelete: Cascade)
+  evidence      EvidenceRecord @relation(fields: [evidenceId], references: [id], onDelete: Cascade)
+
+  @@index([aiAnalysisRunId])
+  @@map("ai_evidence_references")
+}
+
+model Notification {
+  id             String           @id @default(cuid())
+  organizationId String
+  userId         String
+  title          String
+  message        String
+  link           String?
+  type           NotificationType @default(REVIEW_DEADLINE)
+  isRead         Boolean          @default(false)
+  readAt         DateTime?
+  dueDate        DateTime?
+  createdAt      DateTime         @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, userId, isRead])
+  @@map("notifications")
+}
+
+model AuditEvent {
+  id             String      @id @default(cuid())
+  organizationId String
+  actorId        String
+  entityType     String
+  entityId       String
+  action         AuditAction
+  beforeState    String?
+  afterState     String?
+  changeReason   String?
+  ipAddress      String?
+  userAgent      String?
+  createdAt      DateTime    @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  actor        User         @relation(fields: [actorId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, entityType, entityId])
+  @@index([organizationId, createdAt])
+  @@map("audit_events")
+}
+
+model PrivacyRequest {
+  id                String               @id @default(cuid())
+  organizationId    String
+  requesterId       String
+  requestType       PrivacyRequestType
+  details           String
+  status            PrivacyRequestStatus @default(PENDING)
+  resolutionNotes   String?
+  exportDownloadUrl String?
+  completedAt       DateTime?
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  requester    User         @relation(fields: [requesterId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, requesterId])
+  @@map("privacy_requests")
+}
+

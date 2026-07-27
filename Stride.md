@@ -32,3 +32,54 @@ Build the actual application, not just a performance dashboard, chatbot, or coll
 
 ## 1. Scope and acceptance criteria
 
+### Required for the initial release
+
+- Secure authentication and role-based access.
+- Employee, manager, and organization management.
+- Configurable roles, skills, competencies, and career expectations.
+- Employee-owned goals and measurable progress updates.
+- Evidence records linked to goals, skills, projects, and review periods.
+- Manager feedback and coaching notes with appropriate visibility controls.
+- Scheduled or configurable review cycles.
+- Employee self-reviews and manager reviews.
+- Structured feedback supported by specific evidence.
+- Development plans with actionable milestones.
+- Coaching conversations and follow-up commitments.
+- Career-growth discussions based on transparent role expectations.
+- Employee access to relevant assessments and supporting evidence.
+- Review, correction, acknowledgement, and dispute workflows.
+- AI-assisted summaries and development suggestions with evidence references.
+- Notifications and review deadlines.
+- Audit history for material changes and review decisions.
+- Dashboards showing goal progress, review completion, and development-plan status.
+- Data export and documented retention controls.
+- Automated tests for workflows, permissions, and data integrity.
+- Reproducible setup, migrations, and deployment documentation.
+
+### Required user outcomes
+
+An employee should be able to:
+
+1. Understand the expectations associated with their current role and a desired growth path.
+2. Define goals collaboratively with their manager.
+3. Record work outcomes and attach relevant evidence.
+4. Track progress over time.
+5. Review feedback and assessment criteria.
+6. Understand why a manager identified a strength or development area.
+7. Contribute context, correct factual errors, and respond to feedback.
+8. Create a practical development plan.
+9. Track milestones and review progress.
+10. Prepare for a career conversation using accumulated evidence.
+
+A manager should be able to:
+
+1. Review an employee's goals and supporting evidence.
+2. Prepare for coaching conversations.
+3. Compare observed work with explicit, role-relevant expectations.
+4. Provide specific, constructive feedback.
+5. Identify missing evidence or unclear expectations.
+6. Agree on development actions with the employee.
+7. Track commitments and review cycles.
+8. Document the reasoning and evidence behind assessments.
+9. Identify team-level development needs without relying on simplistic employee rankings.
+

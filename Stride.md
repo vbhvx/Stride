@@ -83,3 +83,23 @@ A manager should be able to:
 8. Document the reasoning and evidence behind assessments.
 9. Identify team-level development needs without relying on simplistic employee rankings.
 
+### Explicitly out of scope unless separately approved
+
+- Automatic promotion, demotion, termination, or compensation decisions.
+- A universal numerical employee-performance score.
+- Automatic ranking of employees across unrelated roles.
+- Secret employee surveillance or behavioral tracking.
+- Inferring personality, motivation, loyalty, or engagement from unrelated data.
+- Importing private messages, personal communications, or activity logs without a justified, authorized, and transparent purpose.
+- Treating AI-generated feedback as verified managerial judgment.
+- Predicting an employee's future performance or promotion probability without a validated and appropriate methodology.
+- Making protected personal characteristics available to ordinary reviewers without a specific lawful and justified purpose.
+- Claiming to eliminate bias simply because a standardized rubric exists.
+- Unnecessary microservices or complex analytics infrastructure.
+
+The initial product is a development and coaching platform. Employment decisions with significant consequences require separate human-led processes, applicable legal review, and explicit organizational safeguards.
+
+---
+
+## 2. Product principles and operating boundaries
+

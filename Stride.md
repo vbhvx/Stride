@@ -103,3 +103,24 @@ The initial product is a development and coaching platform. Employment decisions
 
 ## 2. Product principles and operating boundaries
 
+### 2.1 Evidence before impressions
+
+Development conversations should be grounded in documented goals, actual work, relevant feedback, observable outcomes, and explicit expectations.
+
+Avoid statements such as “not leadership material” unless a specific, job-relevant concern can be articulated and supported.
+
+Prefer structured observations such as:
+
+- The employee coordinated work across two documented project dependencies.
+- The agreed delivery milestone was completed, with the result and context recorded.
+- The employee needs additional practice in designing resilient API failure handling.
+- A development goal remains incomplete because the required project opportunity was unavailable.
+
+These are illustrative examples, not pre-populated employee records.
+
+### 2.2 Growth before scoring
+
+The primary experience should help employees develop, not reduce them to a leaderboard.
+
+Use clear competencies, evidence, qualitative feedback, and goal progress. Avoid a single composite score that hides differences between skills, opportunities, responsibilities, and context.
+

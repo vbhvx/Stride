@@ -143,3 +143,15 @@ Employees must be able to contribute their own evidence, explain constraints, co
 
 Acknowledging a review should not mean that the employee agrees with its contents.
 
+### 2.5 Human accountability
+
+Managers and authorized decision-makers remain responsible for coaching judgments and consequential employment decisions.
+
+AI may organize information, identify missing context, summarize feedback, and suggest development activities. It must not independently determine promotion eligibility or make final employment decisions.
+
+### 2.6 Context matters
+
+A missed goal may reflect changing priorities, insufficient resources, unclear scope, dependencies, or factors outside an employee's control.
+
+The platform should preserve these explanations rather than treating every outcome as an isolated measure of individual performance.
+

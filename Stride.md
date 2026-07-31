@@ -124,3 +124,22 @@ The primary experience should help employees develop, not reduce them to a leade
 
 Use clear competencies, evidence, qualitative feedback, and goal progress. Avoid a single composite score that hides differences between skills, opportunities, responsibilities, and context.
 
+### 2.3 Transparent expectations
+
+Employees should know:
+
+- What their role expects.
+- How development goals are evaluated.
+- Which examples of work support an assessment.
+- What is still uncertain.
+- What progress would look like.
+- Which actions they can take next.
+
+If promotion criteria are undefined or unavailable, the application must say so instead of inventing a supposedly authoritative readiness threshold.
+
+### 2.4 Employee participation
+
+Employees must be able to contribute their own evidence, explain constraints, correct factual errors, and add context to feedback.
+
+Acknowledging a review should not mean that the employee agrees with its contents.
+

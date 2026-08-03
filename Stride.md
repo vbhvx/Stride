@@ -155,3 +155,13 @@ A missed goal may reflect changing priorities, insufficient resources, unclear s
 
 The platform should preserve these explanations rather than treating every outcome as an isolated measure of individual performance.
 
+### 2.7 Privacy and data minimization
+
+Collect information needed for development and review. Do not treat every available employee data point as appropriate evidence.
+
+Make access, purpose, retention, and correction rules explicit.
+
+---
+
+## 3. Target users and core workflows
+

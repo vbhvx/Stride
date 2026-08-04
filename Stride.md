@@ -165,3 +165,11 @@ Make access, purpose, retention, and correction rules explicit.
 
 ## 3. Target users and core workflows
 
+### Employee
+
+Owns their development goals, documents work evidence, reviews feedback, proposes learning actions, and prepares for career conversations.
+
+### Manager
+
+Agrees on goals, reviews evidence, provides feedback, conducts coaching conversations, and supports development planning.
+

@@ -173,3 +173,11 @@ Owns their development goals, documents work evidence, reviews feedback, propose
 
 Agrees on goals, reviews evidence, provides feedback, conducts coaching conversations, and supports development planning.
 
+### People Operations or HR
+
+Maintains review processes, role frameworks, policy configurations, deadlines, and organizational oversight.
+
+### Reviewer or authorized approver
+
+Participates in designated reviews or approvals based on the organization's documented responsibilities.
+

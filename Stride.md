@@ -181,3 +181,42 @@ Maintains review processes, role frameworks, policy configurations, deadlines, a
 
 Participates in designated reviews or approvals based on the organization's documented responsibilities.
 
+### Organization administrator
+
+Manages users, access, teams, role frameworks, integrations, and system configuration.
+
+### Core development workflow
+
+```text id="k2t8ma"
+Role Expectations
+        |
+        v
+Collaborative Goal Setting
+        |
+        v
+Work Updates and Evidence
+        |
+        v
+Feedback and Coaching
+        |
+        v
+Progress Review
+        |
+        v
+Strengths and Development Areas
+        |
+        v
+Personal Development Plan
+        |
+        v
+Practice and Milestones
+        |
+        v
+Evidence Reassessment
+        |
+        v
+Career Growth Conversation
+```
+
+Review periods can repeat this cycle. A development goal may continue into the next period without automatically being interpreted as a performance failure.
+

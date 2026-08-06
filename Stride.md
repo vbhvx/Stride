@@ -220,3 +220,71 @@ Career Growth Conversation
 
 Review periods can repeat this cycle. A development goal may continue into the next period without automatically being interpreted as a performance failure.
 
+### Core user journeys
+
+**Journey A — Establish development goals**
+
+`Review role expectations → Agree on goals → Define success criteria → Record milestones → Schedule check-ins`
+
+**Journey B — Document growth**
+
+`Record contribution → Attach evidence → Link to goal or competency → Add context → Review progress`
+
+**Journey C — Coach an employee**
+
+`Review recent evidence → Identify a development area → Discuss examples → Agree on actions → Set follow-up`
+
+**Journey D — Prepare a review**
+
+`Review goals and evidence → Complete self-review → Add manager feedback → Discuss differences → Record agreed next steps`
+
+**Journey E — Explore career progression**
+
+`Review target-role expectations → Identify supported strengths → Identify missing evidence or skills → Create development plan → Revisit progress`
+
+---
+
+## 4. Technology stack and architecture
+
+Inspect the existing repository before changing its technology stack. Preserve sound existing infrastructure.
+
+If starting from scratch, use the following defaults.
+
+| Component | Recommended choice | Purpose |
+|---|---|---|
+| Frontend | Next.js, React, TypeScript | Responsive application |
+| Styling | Tailwind CSS or existing design system | Consistent interface |
+| Backend | Next.js server-side modules or a separate typed API | Business logic and permissions |
+| Validation | Zod or equivalent | Runtime input validation |
+| Database | PostgreSQL | Employees, goals, evidence, feedback, and review records |
+| ORM | Prisma or equivalent | Database access and migrations |
+| File storage | Private object storage | Authorized evidence attachments |
+| Background jobs | Worker where required | Notifications and scheduled review operations |
+| AI integration | Replaceable LLM adapter | Summarization and development assistance |
+| Search | PostgreSQL full-text search initially | Goals, feedback, and evidence retrieval |
+| Testing | Unit and integration tests | Domain and workflow correctness |
+| Browser testing | Playwright | End-to-end workflow validation |
+| Deployment | Compatible managed application and database hosting | Reproducible operation |
+| CI | Linting, type checks, tests, and build | Engineering verification |
+
+Use a modular monolith for the initial release.
+
+Keep these domains separate:
+
+- Identity and organization membership.
+- Role expectations and competency frameworks.
+- Goals and milestones.
+- Work evidence.
+- Feedback and coaching.
+- Review cycles.
+- Development plans.
+- Career conversations.
+- AI assistance.
+- Notifications.
+- Audit and reporting.
+- Privacy and administration.
+
+Do not introduce complex distributed architecture unless the existing system or measured requirements justify it.
+
+---
+

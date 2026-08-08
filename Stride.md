@@ -288,3 +288,59 @@ Do not introduce complex distributed architecture unless the existing system or 
 
 ---
 
+## 5. High-level architecture
+
+```text id="q4w8yn"
+Responsive Web Application
+           |
+           v
+       Application API
+           |
+           +-- Authentication and Authorization
+           +-- Organizations and Teams
+           +-- Role / Competency Frameworks
+           +-- Goals and Milestones
+           +-- Work Evidence
+           +-- Feedback and Coaching
+           +-- Review Cycles
+           +-- Development Plans
+           +-- Career Conversations
+           +-- AI Assistance
+           +-- Notifications
+           +-- Audit and Reporting
+           +-- Privacy and Data Export
+           |
+           v
+        PostgreSQL
+           |
+           +-- Users and Memberships
+           +-- Roles and Competencies
+           +-- Goals and Progress Updates
+           +-- Evidence and Feedback
+           +-- Reviews and Development Plans
+           +-- Permissions and Audit Events
+           |
+           +----------------------------+
+           |                            |
+           v                            v
+     Private File Storage         Background Jobs
+    Authorized Evidence           Notifications
+                                      |
+                                      v
+                             Optional AI Provider
+```
+
+### Architecture rules
+
+- All private employee records must be authorized server-side.
+- Employee and manager visibility must follow explicit access rules.
+- Goals, feedback, evidence, and review records must preserve provenance.
+- AI suggestions must remain separate from human-approved decisions.
+- Consequential assessment changes must be auditable.
+- The application must work when an AI provider is unavailable.
+- Sensitive notes must not become visible merely because they relate to the same employee.
+- Review and promotion-related data must not be used for an undisclosed purpose.
+- Historical reviews must preserve the criteria and context used when they were created.
+
+---
+

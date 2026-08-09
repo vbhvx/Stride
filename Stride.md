@@ -344,3 +344,26 @@ Responsive Web Application
 
 ---
 
+## 6. Role expectations and competency framework
+
+Implement a structured framework for describing role expectations and development paths.
+
+### 6.1 Role profiles
+
+A role profile may include:
+
+- Role title.
+- Job family.
+- Level or career stage.
+- Role purpose.
+- Expected responsibilities.
+- Relevant competencies.
+- Observable examples of expected behavior.
+- Technical or professional expectations.
+- Scope of ownership.
+- Collaboration expectations.
+- Approved progression criteria.
+- Framework version and effective date.
+
+Do not assume that titles or levels are comparable across every organization.
+

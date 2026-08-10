@@ -367,3 +367,28 @@ A role profile may include:
 
 Do not assume that titles or levels are comparable across every organization.
 
+### 6.2 Competencies
+
+Support configurable competencies such as:
+
+- Technical problem-solving.
+- System design.
+- Software quality.
+- Communication.
+- Collaboration.
+- Ownership.
+- Delivery and planning.
+- Mentoring and knowledge sharing.
+- Domain knowledge.
+- Product or customer understanding.
+
+These are example categories. Organizations must be able to adapt the framework to the actual roles they evaluate.
+
+### 6.3 Observable expectations
+
+Define competency expectations using observable examples rather than vague personality judgments.
+
+For example, a system-design competency might describe the ability to explain architectural options, identify trade-offs, and account for reliability and maintainability.
+
+Do not equate an individual's communication style, confidence, visibility, or similarity to a manager with professional capability.
+

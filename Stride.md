@@ -392,3 +392,21 @@ For example, a system-design competency might describe the ability to explain ar
 
 Do not equate an individual's communication style, confidence, visibility, or similarity to a manager with professional capability.
 
+### 6.4 Evidence mapping
+
+Allow evidence to support more than one relevant goal or competency, provided the relationship is clear and does not exaggerate the significance of the same accomplishment through repeated counting.
+
+Every mapping should contain:
+
+- Referenced evidence.
+- Relevant competency or expectation.
+- Explanation of the relationship.
+- Author and timestamp.
+- Review status where applicable.
+
+### 6.5 Framework versioning
+
+When the organization changes a role framework, preserve the version used for an existing review.
+
+Do not silently re-score historical reviews using new criteria.
+

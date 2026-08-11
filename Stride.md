@@ -410,3 +410,15 @@ When the organization changes a role framework, preserve the version used for an
 
 Do not silently re-score historical reviews using new criteria.
 
+### 6.6 Missing criteria
+
+If a target role does not have documented expectations, display that limitation.
+
+Do not manufacture an authoritative promotion rubric based on a generic AI-generated description.
+
+---
+
+## 7. Goal management and progress tracking
+
+Implement collaborative, measurable, and revisable development goals.
+

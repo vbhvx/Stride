@@ -422,3 +422,36 @@ Do not manufacture an authoritative promotion rubric based on a generic AI-gener
 
 Implement collaborative, measurable, and revisable development goals.
 
+### 7.1 Goal model
+
+A goal should support:
+
+- Goal title and description.
+- Owner.
+- Collaborating manager.
+- Goal category.
+- Linked role expectation or competency.
+- Definition of success.
+- Baseline or current state, where relevant.
+- Target outcome.
+- Milestones.
+- Start date and due date.
+- Status.
+- Progress updates.
+- Evidence references.
+- Dependencies and constraints.
+- Review history.
+- Change rationale.
+
+Not every goal requires a numerical target. Skill development, mentoring, and architectural work may need qualitative evidence and milestone-based criteria.
+
+### 7.2 Goal lifecycle
+
+A configurable lifecycle may include:
+
+`draft → proposed → agreed → in_progress → completed`.
+
+Additional states may include `paused`, `revised`, `deferred`, or `cancelled`, depending on the organization's practices.
+
+Transitions must retain history and distinguish incomplete work from work that was paused or deprioritized.
+

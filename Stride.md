@@ -455,3 +455,39 @@ Additional states may include `paused`, `revised`, `deferred`, or `cancelled`, d
 
 Transitions must retain history and distinguish incomplete work from work that was paused or deprioritized.
 
+### 7.3 Progress updates
+
+Allow employees to document:
+
+- Work completed.
+- Relevant outcomes.
+- What they learned.
+- Blockers.
+- Dependencies.
+- Changes to scope.
+- Supporting links or evidence.
+- Assistance needed.
+- Next steps.
+
+Progress updates must retain their timestamps and authorship.
+
+### 7.4 Collaborative goal changes
+
+Goals should be revisable when priorities or conditions change.
+
+Record who proposed a change, who agreed to it, the reason, and how it affects the timeline and success criteria.
+
+Do not automatically interpret an altered deadline as evidence of poor performance.
+
+### 7.5 Goal analytics
+
+Display progress based on the goal's actual measurement method.
+
+For quantitative goals, show validated progress calculations.
+
+For qualitative goals, show milestone completion and evidence rather than manufacturing a percentage.
+
+Do not imply that completing a larger number of goals necessarily means an employee contributed more value.
+
+---
+

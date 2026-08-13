@@ -515,3 +515,39 @@ Support records such as:
 
 Evidence can be entered manually or linked to an authorized source.
 
+### 8.2 Evidence record
+
+Each evidence item should include:
+
+- Evidence ID.
+- Owner or contributor.
+- Title.
+- Description.
+- Evidence type.
+- Creation or completion date.
+- Source.
+- Supporting URL or attachment.
+- Linked goal.
+- Linked competency.
+- Project or work context.
+- Visibility classification.
+- Verification status.
+- Reviewer comments.
+- Created and updated timestamps.
+
+### 8.3 Evidence provenance
+
+Distinguish between:
+
+- Employee-entered information.
+- Manager-entered observations.
+- Peer feedback.
+- Imported information from an authorized integration.
+- System-calculated measures.
+- AI-generated summaries.
+- Verified external artifacts.
+
+Do not present an employee-authored claim as independently verified evidence.
+
+Similarly, a manager's opinion must be identifiable as an assessment rather than an objective system-generated fact.
+

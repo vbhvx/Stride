@@ -491,3 +491,27 @@ Do not imply that completing a larger number of goals necessarily means an emplo
 
 ---
 
+## 8. Work evidence and contribution records
+
+The platform must make meaningful work visible without requiring employees to turn every activity into a metric.
+
+### 8.1 Evidence types
+
+Support records such as:
+
+- Project deliverables.
+- Design documents.
+- Code contributions.
+- Technical decisions.
+- Completed milestones.
+- Product outcomes.
+- Written feedback.
+- Mentoring contributions.
+- Incident resolution.
+- Quality improvements.
+- Cross-team collaboration.
+- Learning and experimentation.
+- Other role-relevant work products.
+
+Evidence can be entered manually or linked to an authorized source.
+

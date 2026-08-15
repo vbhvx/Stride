@@ -551,3 +551,28 @@ Do not present an employee-authored claim as independently verified evidence.
 
 Similarly, a manager's opinion must be identifiable as an assessment rather than an objective system-generated fact.
 
+### 8.4 Contribution context
+
+Capture relevant contextual information, where appropriate:
+
+- Scope of the work.
+- Dependencies and constraints.
+- Team contributions.
+- Available resources.
+- Complexity.
+- Decisions made.
+- Observable outcome.
+- What the employee personally contributed.
+
+Avoid attributing an entire team result to a single employee without a defensible basis.
+
+### 8.5 Evidence quality
+
+Do not equate the volume of evidence with the magnitude of contribution.
+
+Provide ways to assess whether evidence is relevant, specific, recent enough for its purpose, and connected to the stated expectation.
+
+Missing evidence should be represented as an evidence gap—not automatically as proof of poor performance.
+
+---
+

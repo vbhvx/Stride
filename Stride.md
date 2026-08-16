@@ -597,3 +597,31 @@ Support:
 - Visibility rules.
 - Acknowledgement status.
 
+### 9.2 Feedback principles
+
+Encourage feedback that is:
+
+- Specific.
+- Relevant to the person's role.
+- Supported by examples.
+- Clear about the expected change.
+- Balanced where supported by evidence.
+- Actionable.
+- Open to clarification.
+
+Do not generate praise or criticism merely to make a review appear balanced.
+
+### 9.3 Coaching sessions
+
+Allow managers and employees to document coaching sessions with:
+
+- Discussion topics.
+- Progress since the previous session.
+- Achievements and challenges.
+- Questions and blockers.
+- Agreed development actions.
+- Owners and due dates.
+- Follow-up status.
+
+Clearly differentiate shared coaching notes from restricted managerial notes.
+

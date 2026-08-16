@@ -576,3 +576,24 @@ Missing evidence should be represented as an evidence gap—not automatically as
 
 ---
 
+## 9. Feedback and coaching
+
+Build a structured feedback system that helps managers and employees discuss observable behavior, outcomes, and growth opportunities.
+
+### 9.1 Feedback records
+
+Support:
+
+- Author.
+- Recipient.
+- Date.
+- Review period or coaching session.
+- Related goal or competency.
+- Specific observation.
+- Context.
+- Impact.
+- Suggested next action.
+- Optional response from the recipient.
+- Visibility rules.
+- Acknowledgement status.
+

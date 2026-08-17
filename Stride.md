@@ -625,3 +625,21 @@ Allow managers and employees to document coaching sessions with:
 
 Clearly differentiate shared coaching notes from restricted managerial notes.
 
+### 9.4 Employee response
+
+Employees must be able to respond to feedback within the configured workflow.
+
+Possible response types include acknowledgement, clarification, correction, additional evidence, or a request for discussion.
+
+An acknowledgement must not be interpreted automatically as agreement.
+
+### 9.5 Coaching-plan generation
+
+AI may help draft coaching questions or suggested actions using the relevant goal, feedback, and competency evidence.
+
+The manager must review and edit the draft before it becomes an agreed coaching plan.
+
+Do not generate a negative conclusion about an employee from a single incident without the required context.
+
+---
+

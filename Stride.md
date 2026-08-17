@@ -643,3 +643,23 @@ Do not generate a negative conclusion about an employee from a single incident w
 
 ---
 
+## 10. Review cycles and structured assessments
+
+Implement a review system that uses documented expectations and relevant evidence.
+
+### 10.1 Review cycles
+
+Support configurable cycles such as quarterly, semiannual, annual, or manager-defined reviews.
+
+Each cycle may include:
+
+- Start and end dates.
+- Participants.
+- Required forms.
+- Self-review deadline.
+- Manager-review deadline.
+- Feedback requirements.
+- Calibration or approval steps where applicable.
+- Final discussion.
+- Completion status.
+

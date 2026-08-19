@@ -663,3 +663,34 @@ Each cycle may include:
 - Final discussion.
 - Completion status.
 
+### 10.2 Self-review
+
+Allow employees to summarize:
+
+- Progress against agreed goals.
+- Key contributions.
+- Evidence of growth.
+- Skills practiced.
+- Challenges and constraints.
+- Learning outcomes.
+- Areas where additional support is needed.
+- Future goals.
+
+Do not force employees to provide numerical self-ratings if the organization has no justified and transparent model for them.
+
+### 10.3 Manager review
+
+Allow managers to review the employee's goals, evidence, and self-review.
+
+Structure assessments around the relevant expectations and supporting examples.
+
+For each material assessment, capture:
+
+- Expectation.
+- Observed evidence.
+- Context.
+- Assessment or conclusion.
+- Development suggestion.
+- Uncertainty or missing evidence.
+- Reviewer and timestamp.
+

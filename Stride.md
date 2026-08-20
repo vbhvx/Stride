@@ -694,3 +694,17 @@ For each material assessment, capture:
 - Uncertainty or missing evidence.
 - Reviewer and timestamp.
 
+### 10.4 Differences in interpretation
+
+If an employee and manager disagree, preserve both perspectives.
+
+Support a documented discussion or follow-up rather than silently replacing the employee's view with the manager's text.
+
+### 10.5 Review locking and corrections
+
+Once a review is finalized, preserve the finalized version.
+
+If corrections are required, use a versioned amendment or reopening procedure with an audit record.
+
+Do not allow silent rewriting of historical assessments.
+

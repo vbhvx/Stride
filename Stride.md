@@ -720,3 +720,36 @@ Make the distinction explicit.
 
 Translate review outcomes into concrete, employee-centered actions.
 
+### 11.1 Development plan
+
+A development plan may contain:
+
+- Development objective.
+- Relevant competency or skill.
+- Current evidence.
+- Desired capability.
+- Learning activities.
+- Practical work assignments.
+- Mentoring or coaching commitments.
+- Milestones.
+- Success criteria.
+- Support needed.
+- Target dates.
+- Evidence collection plan.
+- Review checkpoints.
+
+### 11.2 Action types
+
+Support actions such as:
+
+- Completing a learning module.
+- Designing and reviewing a technical system.
+- Taking ownership of a scoped deliverable.
+- Pairing with a colleague.
+- Leading a review or demonstration.
+- Writing documentation.
+- Practicing a specific skill.
+- Receiving structured feedback.
+
+Do not use course completion alone as proof of capability when practical demonstration is more appropriate.
+

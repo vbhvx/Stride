@@ -708,3 +708,15 @@ If corrections are required, use a versioned amendment or reopening procedure wi
 
 Do not allow silent rewriting of historical assessments.
 
+### 10.6 Completion does not equal agreement
+
+A review can be marked complete when the required process is finished even if the employee disagrees with a statement, provided the configured process permits acknowledgement with disagreement.
+
+Make the distinction explicit.
+
+---
+
+## 11. Development plans and skill-gap identification
+
+Translate review outcomes into concrete, employee-centered actions.
+

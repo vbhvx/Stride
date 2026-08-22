@@ -753,3 +753,27 @@ Support actions such as:
 
 Do not use course completion alone as proof of capability when practical demonstration is more appropriate.
 
+### 11.3 Skills-gap analysis
+
+Compare documented current evidence with explicit target-role or competency expectations.
+
+Show:
+
+- Expectations with supporting evidence.
+- Expectations with partial evidence.
+- Expectations with insufficient evidence.
+- Development activities relevant to each gap.
+- Areas needing manager or employee clarification.
+
+Do not convert missing documentation into a definitive statement that the employee lacks the skill.
+
+### 11.4 Development-plan review
+
+Track progress against actions and milestones.
+
+Allow changes to the plan with a recorded reason and updated expectations.
+
+Do not penalize employees automatically when opportunities, assignments, resources, or organizational priorities change.
+
+---
+

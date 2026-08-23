@@ -777,3 +777,20 @@ Do not penalize employees automatically when opportunities, assignments, resourc
 
 ---
 
+## 12. Career progression and promotion discussions
+
+Support career conversations without turning the application into an automated promotion judge.
+
+### 12.1 Role progression framework
+
+Allow organizations to define:
+
+- Current role expectations.
+- Target role expectations.
+- Relevant competencies.
+- Examples of observable capability.
+- Scope of responsibility.
+- Evidence requirements.
+- Required human review.
+- Applicable organizational policies.
+

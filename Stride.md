@@ -794,3 +794,25 @@ Allow organizations to define:
 - Required human review.
 - Applicable organizational policies.
 
+### 12.2 Evidence-based career overview
+
+For a proposed career step, summarize:
+
+- Relevant documented accomplishments.
+- Supporting examples.
+- Skills demonstrated.
+- Areas where evidence is incomplete.
+- Development activities completed.
+- Open development goals.
+- Questions for the next career conversation.
+
+The output must make clear that it is a structured evidence review, not a guaranteed promotion outcome.
+
+### 12.3 No automatic promotion score
+
+Do not generate a universal “promotion probability,” “employee value score,” or final promotion recommendation based on an opaque model.
+
+Do not rank employees by combining unrelated goals, feedback, and competencies into one unexplained number.
+
+If an organization uses formal rating scales, require documented definitions, a clear intended use, human review, and appropriate validation.
+

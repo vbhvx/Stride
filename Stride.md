@@ -816,3 +816,17 @@ Do not rank employees by combining unrelated goals, feedback, and competencies i
 
 If an organization uses formal rating scales, require documented definitions, a clear intended use, human review, and appropriate validation.
 
+### 12.4 Fair comparisons
+
+When comparing evidence against target-role expectations, ensure that the relevant criteria are documented and appropriate to the role.
+
+Do not compare employees in materially different roles or working contexts using one generic scoring model.
+
+Account for opportunity differences and missing evidence.
+
+### 12.5 Human decision-making
+
+Any actual promotion, compensation, termination, or similarly consequential employment decision must remain in the organization's authorized human-led process.
+
+The application may store the decision and its approved documentation if that capability is in scope, but it must not automatically make the decision based on AI output.
+

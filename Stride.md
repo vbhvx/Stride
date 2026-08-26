@@ -830,3 +830,17 @@ Any actual promotion, compensation, termination, or similarly consequential empl
 
 The application may store the decision and its approved documentation if that capability is in scope, but it must not automatically make the decision based on AI output.
 
+### 12.6 Employee transparency
+
+Employees must be able to see the criteria and relevant evidence used in their development discussions, subject to clearly documented and justified access restrictions.
+
+Provide a mechanism for correcting factual errors and recording disagreements.
+
+Do not treat access restrictions as permission to conceal the criteria by which the employee is being evaluated.
+
+---
+
+## 13. AI architecture and responsible use
+
+AI should help users organize and interpret evidence, not independently determine an employee's worth or career outcome.
+

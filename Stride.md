@@ -844,3 +844,35 @@ Do not treat access restrictions as permission to conceal the criteria by which 
 
 AI should help users organize and interpret evidence, not independently determine an employee's worth or career outcome.
 
+### 13.1 Supported AI tasks
+
+The initial assistant may:
+
+- Summarize goal progress.
+- Organize an employee's documented contributions.
+- Summarize feedback from authorized records.
+- Identify potentially missing evidence.
+- Suggest clarifying questions.
+- Draft coaching agendas.
+- Suggest development activities related to explicit competencies.
+- Help structure review drafts.
+- Summarize changes between review periods.
+- Highlight factual inconsistencies for human review.
+
+The system must not claim to know an employee's character, motivation, loyalty, emotional state, or future success from limited work records.
+
+### 13.2 Retrieval and evidence
+
+For each AI task:
+
+1. Verify the user's authorization.
+2. Retrieve only the relevant, permitted records.
+3. Minimize information sent to the model.
+4. Supply explicit competency and review definitions where applicable.
+5. Request structured output.
+6. Validate the output.
+7. Verify evidence references.
+8. Mark the result as AI-generated.
+9. Allow review, correction, or rejection.
+10. Record relevant model and workflow metadata.
+

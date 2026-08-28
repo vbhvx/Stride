@@ -876,3 +876,34 @@ For each AI task:
 9. Allow review, correction, or rejection.
 10. Record relevant model and workflow metadata.
 
+### 13.3 Evidence-backed summaries
+
+A summary must identify which records support its material claims.
+
+Do not invent achievements, dates, feedback, goals, outcomes, skill demonstrations, or statements made by colleagues.
+
+If evidence is missing or conflicting, say so.
+
+Distinguish between an employee's self-report, a manager's observation, a peer's feedback, and an independently verified artifact.
+
+### 13.4 AI-generated feedback
+
+AI may help a manager phrase an observation constructively, but it must not fabricate a performance issue or create praise unsupported by available evidence.
+
+Require the manager to review and approve the final feedback.
+
+### 13.5 Bias and quality controls
+
+Evaluate whether the system:
+
+- Applies documented criteria consistently.
+- Handles missing evidence appropriately.
+- Produces unsupported negative or positive claims.
+- Treats differently written feedback inappropriately.
+- Overweights easily measured activities.
+- Confuses visibility with contribution.
+- Reproduces stereotypes or irrelevant personal attributes.
+- Fails to represent uncertainty.
+
+Use human review and appropriate evaluation methods before introducing high-impact uses.
+

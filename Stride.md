@@ -907,3 +907,21 @@ Evaluate whether the system:
 
 Use human review and appropriate evaluation methods before introducing high-impact uses.
 
+### 13.6 Prompt-injection defense
+
+Treat feedback text, employee notes, imported documents, and external integrations as untrusted content.
+
+Instructions embedded in these records must not override system rules or access permissions.
+
+The AI must not retrieve another employee's restricted information merely because a prompt requests it.
+
+### 13.7 AI failure behavior
+
+If the AI provider is unavailable:
+
+- Goals and feedback must remain accessible.
+- Reviews must remain editable through the ordinary workflow.
+- Users must be able to complete manual development planning.
+- Failed AI tasks must be marked accurately.
+- No review status or employee assessment may be silently altered.
+

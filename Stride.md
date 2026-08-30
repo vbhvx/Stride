@@ -925,3 +925,50 @@ If the AI provider is unavailable:
 - Failed AI tasks must be marked accurately.
 - No review status or employee assessment may be silently altered.
 
+### 13.8 Responsible AI governance
+
+Maintain documentation for AI use cases, intended purposes, data sources, limitations, evaluation procedures, and change history.
+
+A useful reference for organizing AI risk management is the NIST AI Risk Management Framework, which structures risk work around **Govern, Map, Measure, and Manage**. Adapt the framework to the actual application rather than treating it as a certification or compliance claim.
+
+Reference: https://www.nist.gov/itl/ai-risk-management-framework
+
+---
+
+## 14. Database schema
+
+Use PostgreSQL with versioned migrations, foreign keys, appropriate indexes, and explicit organization-level ownership.
+
+The following tables define the minimum conceptual schema.
+
+| Table | Purpose |
+|---|---|
+| `organizations` | Organization and workspace identity |
+| `users` | User identity and account status |
+| `organization_memberships` | Membership, team, and role relationships |
+| `teams` | Team metadata |
+| `role_profiles` | Job roles and career levels |
+| `role_profile_versions` | Versioned role expectations |
+| `competencies` | Competency definitions |
+| `competency_expectations` | Observable expectations by role or level |
+| `goals` | Employee development and work goals |
+| `goal_milestones` | Goal-specific milestones |
+| `goal_updates` | Progress notes and status history |
+| `evidence_records` | Work evidence and source provenance |
+| `evidence_links` | Links between evidence, goals, skills, and reviews |
+| `feedback_records` | Manager, peer, and employee feedback |
+| `coaching_sessions` | Coaching discussions and follow-ups |
+| `development_plans` | Employee development plans |
+| `development_actions` | Milestones, assignments, and learning actions |
+| `review_cycles` | Review periods and configuration |
+| `reviews` | Self-reviews and manager reviews |
+| `review_assessments` | Expectation-specific assessments and evidence |
+| `review_responses` | Employee responses, corrections, and acknowledgements |
+| `review_versions` | Immutable or reproducible review snapshots |
+| `career_conversations` | Career-development discussion records |
+| `ai_analysis_runs` | AI task status, versions, and outcome metadata |
+| `ai_evidence_references` | Links from AI claims to authorized evidence |
+| `notifications` | Review and coaching reminders |
+| `audit_events` | Material actions and record changes |
+| `privacy_requests` | Export, correction, and deletion workflows |
+

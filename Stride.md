@@ -972,3 +972,37 @@ The following tables define the minimum conceptual schema.
 | `audit_events` | Material actions and record changes |
 | `privacy_requests` | Export, correction, and deletion workflows |
 
+### Core schema requirements
+
+**`goals`** should retain the owner, collaborators, success criteria, dates, status, linked role expectations, and the history of important changes.
+
+**`evidence_records`** should retain the source, author, timestamp, description, artifact reference, visibility, verification status, and permitted use.
+
+**`feedback_records`** should distinguish the author, recipient, source type, relevant context, linked expectations, visibility, and review period.
+
+**`review_assessments`** should capture the relevant expectation, evidence references, assessment text, assessor, missing information, and review status.
+
+**`development_plans`** should link development goals, actions, milestones, support needs, due dates, and relevant review records.
+
+**`review_versions`** should preserve the criteria and submitted review state used in a finalized review.
+
+**`audit_events`** should record material changes, actors, timestamps, relevant before-and-after values where appropriate, and the reason for consequential actions.
+
+**`ai_analysis_runs`** should record the AI task, model or provider identifier, version metadata, status, and relevant result references without retaining unnecessary personal data.
+
+### Database requirements
+
+- Enforce organization and employee ownership.
+- Use foreign keys and appropriate deletion policies.
+- Index common organization, user, team, role, review-period, and status queries.
+- Preserve historical review versions.
+- Keep sensitive notes separately permissioned where needed.
+- Use private storage for attachments.
+- Version competency frameworks and review criteria.
+- Apply transactions to material review-state changes.
+- Audit consequential modifications.
+- Support data retention, export, correction, and deletion policies.
+- Do not store sensitive employee data simply because the schema can accommodate it.
+
+---
+

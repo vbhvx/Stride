@@ -1006,3 +1006,18 @@ The following tables define the minimum conceptual schema.
 
 ---
 
+## 15. Backend API contract
+
+Implement versioned, validated APIs under `/api/v1`, or an equally clear application-server contract.
+
+### Organization and role frameworks
+
+- `GET /api/v1/organizations/{organizationId}/members`
+- `GET /api/v1/role-profiles`
+- `POST /api/v1/role-profiles`
+- `GET /api/v1/role-profiles/{roleProfileId}`
+- `PATCH /api/v1/role-profiles/{roleProfileId}`
+- `GET /api/v1/competencies`
+
+Restrict changes to authorized administrators and preserve framework versions.
+

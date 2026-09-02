@@ -1021,3 +1021,27 @@ Implement versioned, validated APIs under `/api/v1`, or an equally clear applica
 
 Restrict changes to authorized administrators and preserve framework versions.
 
+### Goals and progress
+
+- `GET /api/v1/goals`
+- `POST /api/v1/goals`
+- `GET /api/v1/goals/{goalId}`
+- `PATCH /api/v1/goals/{goalId}`
+- `POST /api/v1/goals/{goalId}/updates`
+- `POST /api/v1/goals/{goalId}/milestones`
+
+Validate goal ownership, collaborator permissions, dates, status transitions, and required success criteria.
+
+### Evidence and feedback
+
+- `GET /api/v1/evidence`
+- `POST /api/v1/evidence`
+- `GET /api/v1/evidence/{evidenceId}`
+- `PATCH /api/v1/evidence/{evidenceId}`
+- `POST /api/v1/evidence/{evidenceId}/links`
+- `GET /api/v1/feedback`
+- `POST /api/v1/feedback`
+- `POST /api/v1/feedback/{feedbackId}/responses`
+
+Ensure that a user can only access evidence and feedback permitted by the configured visibility rules.
+

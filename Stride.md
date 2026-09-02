@@ -1045,3 +1045,29 @@ Validate goal ownership, collaborator permissions, dates, status transitions, an
 
 Ensure that a user can only access evidence and feedback permitted by the configured visibility rules.
 
+### Coaching and development plans
+
+- `GET /api/v1/coaching-sessions`
+- `POST /api/v1/coaching-sessions`
+- `PATCH /api/v1/coaching-sessions/{sessionId}`
+- `GET /api/v1/development-plans`
+- `POST /api/v1/development-plans`
+- `PATCH /api/v1/development-plans/{planId}`
+- `POST /api/v1/development-plans/{planId}/actions`
+- `POST /api/v1/development-actions/{actionId}/updates`
+
+### Review cycles
+
+- `GET /api/v1/review-cycles`
+- `POST /api/v1/review-cycles`
+- `GET /api/v1/reviews`
+- `POST /api/v1/reviews`
+- `GET /api/v1/reviews/{reviewId}`
+- `PATCH /api/v1/reviews/{reviewId}`
+- `POST /api/v1/reviews/{reviewId}/submit`
+- `POST /api/v1/reviews/{reviewId}/return-for-revision`
+- `POST /api/v1/reviews/{reviewId}/finalize`
+- `POST /api/v1/reviews/{reviewId}/responses`
+
+State-changing operations must enforce the current status, role permissions, required evidence, and configured review rules.
+

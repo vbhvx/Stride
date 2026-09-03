@@ -1071,3 +1071,22 @@ Ensure that a user can only access evidence and feedback permitted by the config
 
 State-changing operations must enforce the current status, role permissions, required evidence, and configured review rules.
 
+### Career conversations
+
+- `GET /api/v1/career-conversations`
+- `POST /api/v1/career-conversations`
+- `GET /api/v1/career-conversations/{conversationId}`
+- `PATCH /api/v1/career-conversations/{conversationId}`
+
+Career-development summaries should be generated from authorized evidence and explicitly documented criteria.
+
+### AI assistance
+
+- `POST /api/v1/ai/goal-summary`
+- `POST /api/v1/ai/feedback-summary`
+- `POST /api/v1/ai/development-plan-draft`
+- `POST /api/v1/ai/review-summary`
+- `POST /api/v1/ai/skill-gap-summary`
+
+Treat these as advisory capabilities. The server must never automatically convert an AI response into a finalized performance assessment or promotion decision.
+

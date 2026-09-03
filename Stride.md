@@ -1090,3 +1090,25 @@ Career-development summaries should be generated from authorized evidence and ex
 
 Treat these as advisory capabilities. The server must never automatically convert an AI response into a finalized performance assessment or promotion decision.
 
+### Audit and privacy
+
+- `GET /api/v1/audit-events`
+- `POST /api/v1/privacy/export`
+- `POST /api/v1/privacy/correction-request`
+- `POST /api/v1/privacy/deletion-request`
+
+### API requirements
+
+- Authenticate and authorize every private operation.
+- Validate inputs and state transitions.
+- Apply rate limits and bounded pagination.
+- Prevent cross-organization access.
+- Return structured error responses.
+- Keep secrets and internal exceptions out of client responses.
+- Use idempotency controls for retryable mutations.
+- Ensure that submission, approval, finalization, and deletion operations are auditable.
+- Do not expose restricted manager notes through employee-facing endpoints.
+- Do not report success before the underlying operation has succeeded.
+
+---
+

@@ -1112,3 +1112,24 @@ Treat these as advisory capabilities. The server must never automatically conver
 
 ---
 
+## 16. Frontend and user experience specification
+
+Build a calm, clear development workspace that makes expectations, evidence, and next steps easy to understand.
+
+Avoid interfaces that resemble surveillance dashboards or employee leaderboards.
+
+### A. Employee dashboard
+
+Display:
+
+- Current goals and progress.
+- Recent evidence and contributions.
+- Upcoming milestones.
+- Feedback awaiting response.
+- Development-plan actions.
+- Upcoming coaching sessions.
+- Open review cycles.
+- Relevant role expectations.
+
+Do not display an overall employee score or inferred promotion probability.
+

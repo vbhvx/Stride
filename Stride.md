@@ -1133,3 +1133,23 @@ Display:
 
 Do not display an overall employee score or inferred promotion probability.
 
+### B. Manager dashboard
+
+Display:
+
+- Direct reports within the manager's authorized scope.
+- Upcoming coaching conversations.
+- Goals needing discussion.
+- Review completion status.
+- Development-plan follow-ups.
+- Evidence gaps requiring clarification.
+- Overdue actions and review deadlines.
+
+Avoid ranking employees according to undocumented productivity metrics.
+
+### C. Goals workspace
+
+Provide goal creation, editing, milestones, progress updates, supporting evidence, collaborative changes, and review history.
+
+Display blockers and changed priorities as context rather than automatically treating them as failures.
+

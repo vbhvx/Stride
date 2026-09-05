@@ -1153,3 +1153,17 @@ Provide goal creation, editing, milestones, progress updates, supporting evidenc
 
 Display blockers and changed priorities as context rather than automatically treating them as failures.
 
+### D. Evidence workspace
+
+Allow employees and authorized managers to add, inspect, organize, and link relevant work evidence.
+
+Display the source, author, date, and verification status.
+
+Make the distinction between an unverified claim, a self-reported accomplishment, and externally verifiable evidence clear.
+
+### E. Feedback and coaching workspace
+
+Display structured feedback, context, examples, next actions, responses, and follow-up status.
+
+Support useful one-to-one meeting preparation without exposing restricted notes.
+

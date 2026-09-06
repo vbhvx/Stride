@@ -1181,3 +1181,23 @@ Display development objectives, practical activities, milestones, mentoring comm
 
 The employee and manager should be able to review the plan together.
 
+### H. Career-growth workspace
+
+Compare documented expectations for the current and desired role with available evidence.
+
+Display:
+
+- Relevant strengths.
+- Evidence-backed accomplishments.
+- Missing or partial evidence.
+- Suggested development activities.
+- Questions for the career conversation.
+
+Do not show a single opaque promotion-readiness score.
+
+### I. AI assistance panel
+
+Display draft summaries, suggestions, evidence references, missing information, and clear review controls.
+
+Label generated text as AI-assisted until a human reviews or adopts it.
+

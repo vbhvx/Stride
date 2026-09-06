@@ -1167,3 +1167,17 @@ Display structured feedback, context, examples, next actions, responses, and fol
 
 Support useful one-to-one meeting preparation without exposing restricted notes.
 
+### F. Review workspace
+
+Display self-review, manager review, role expectations, supporting evidence, and unresolved questions.
+
+Users should be able to understand why an assessment was made.
+
+Allow employees to provide context or record disagreement according to the configured review workflow.
+
+### G. Development-plan workspace
+
+Display development objectives, practical activities, milestones, mentoring commitments, due dates, and evidence needed to demonstrate progress.
+
+The employee and manager should be able to review the plan together.
+

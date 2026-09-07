@@ -1232,3 +1232,24 @@ A goal update gathered for coaching should not automatically become a separate e
 
 Do not collect private messages, location histories, keystrokes, browsing activity, or unrelated behavioral data as a substitute for meaningful work evidence.
 
+### 17.2 Access and visibility
+
+Define visibility at the record level.
+
+Possible categories include:
+
+- Employee-visible shared records.
+- Manager-only administrative notes, where justified.
+- Restricted HR records.
+- Authorized review and audit records.
+
+Do not assume that every manager should see every employee note or that every HR user requires unrestricted access to all data.
+
+Record visibility rules must be enforced by the backend.
+
+### 17.3 Employee access and correction
+
+Provide appropriate mechanisms for employees to inspect their development records, correct factual errors, submit context, and request review of disputed content.
+
+A correction should not silently erase the original history when auditability requires preserving a versioned record.
+

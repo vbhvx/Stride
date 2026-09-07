@@ -1201,3 +1201,22 @@ Display draft summaries, suggestions, evidence references, missing information, 
 
 Label generated text as AI-assisted until a human reviews or adopts it.
 
+### J. Administration
+
+Provide restricted management for users, teams, roles, competencies, review cycles, access rules, and retention settings.
+
+### General UI requirements
+
+- Responsive desktop and mobile layouts.
+- Accessible keyboard navigation.
+- Clear headings and statuses.
+- Helpful loading, empty, and error states.
+- Visible provenance for assessments and evidence.
+- Confirmation for consequential changes.
+- No hidden review criteria.
+- No nonfunctional workflow buttons.
+- No fabricated employee or team data presented as real.
+- No unnecessary tracking or surveillance features.
+
+---
+

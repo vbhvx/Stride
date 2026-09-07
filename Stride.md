@@ -1220,3 +1220,15 @@ Provide restricted management for users, teams, roles, competencies, review cycl
 
 ---
 
+## 17. Fairness, privacy, and governance
+
+Employee-development data can affect professional opportunities. It must be handled with care.
+
+### 17.1 Purpose limitation
+
+Define the intended use of each type of data.
+
+A goal update gathered for coaching should not automatically become a separate employment-risk indicator.
+
+Do not collect private messages, location histories, keystrokes, browsing activity, or unrelated behavioral data as a substitute for meaningful work evidence.
+

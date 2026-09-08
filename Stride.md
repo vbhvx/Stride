@@ -1253,3 +1253,23 @@ Provide appropriate mechanisms for employees to inspect their development record
 
 A correction should not silently erase the original history when auditability requires preserving a versioned record.
 
+### 17.4 Bias and inconsistent criteria
+
+Use explicit role expectations and evidence standards.
+
+Monitor for patterns such as:
+
+- Some employees receiving more opportunities to demonstrate competencies.
+- Feedback quality varying substantially by manager.
+- Missing evidence being treated as failure in some teams.
+- Similar work being evaluated differently without an explainable reason.
+- Visibility or communication style being overvalued compared with relevant outcomes.
+
+These controls can identify potential inconsistencies; they do not guarantee that the system or organization is unbiased.
+
+### 17.5 Sensitive information
+
+Avoid collecting or exposing sensitive personal data unless its use is necessary, authorized, and appropriate for the relevant purpose and jurisdiction.
+
+Do not infer protected characteristics from employee names, writing style, photographs, or unrelated attributes.
+

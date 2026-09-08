@@ -1273,3 +1273,23 @@ Avoid collecting or exposing sensitive personal data unless its use is necessary
 
 Do not infer protected characteristics from employee names, writing style, photographs, or unrelated attributes.
 
+### 17.6 AI governance
+
+Document AI use cases, intended purposes, risks, evaluation methods, human oversight, and changes to model behavior.
+
+Aligning relevant controls with the NIST AI Risk Management Framework is a useful starting point, but it is not a substitute for jurisdiction-specific legal review or a claim of compliance.
+
+### 17.7 Regulatory review
+
+Before deployment, determine the applicable employment, privacy, discrimination, record-retention, and AI rules for each supported jurisdiction.
+
+Maintain a review register documenting the feature, applicable requirements, official sources, review date, owner, implementation controls, and approval status.
+
+Do not claim universal legal compliance based solely on technical safeguards.
+
+---
+
+## 18. Testing and validation plan
+
+Create deterministic tests that do not require a paid AI provider or production employee data.
+

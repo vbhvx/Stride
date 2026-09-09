@@ -1318,3 +1318,29 @@ Test:
 - Missing evidence handling.
 - Employee and manager contribution history.
 
+### Evidence tests
+
+Test:
+
+- Source and author preservation.
+- Linking evidence to goals and competencies.
+- Evidence visibility.
+- Duplicate evidence handling.
+- Corrections and version history.
+- Claims without verification.
+- Cross-employee evidence access.
+
+### Review tests
+
+Test:
+
+- Self-review submission.
+- Manager-review submission.
+- Incomplete assessments.
+- Required evidence handling.
+- Employee response and disagreement.
+- Review finalization.
+- Amendments to finalized reviews.
+- Audit history.
+- Changes to competency-framework versions.
+

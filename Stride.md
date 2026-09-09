@@ -1293,3 +1293,28 @@ Do not claim universal legal compliance based solely on technical safeguards.
 
 Create deterministic tests that do not require a paid AI provider or production employee data.
 
+### Role and permission tests
+
+Test:
+
+- Employee access to their own goals and evidence.
+- Manager access to authorized direct reports.
+- Restricted-note visibility.
+- Role-based approval permissions.
+- Organization isolation.
+- Unauthorized review finalization.
+- Direct API access that bypasses frontend controls.
+
+### Goal tests
+
+Test:
+
+- Goal creation and editing.
+- Milestone updates.
+- Paused and revised goals.
+- Scope changes and deadline changes.
+- Goal history.
+- Qualitative versus quantitative progress.
+- Missing evidence handling.
+- Employee and manager contribution history.
+

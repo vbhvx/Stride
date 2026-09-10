@@ -1371,3 +1371,17 @@ Test:
 - Human rejection and editing of AI suggestions.
 - Prevention of automatic promotion decisions.
 
+### Fairness and consistency tests
+
+Using appropriate synthetic and authorized test data, examine whether the system treats equivalent evidence consistently under the configured rubric.
+
+Test cases should include differences in feedback wording, evidence availability, roles, and context.
+
+Do not assume that passing a small synthetic test suite establishes real-world fairness.
+
+### End-to-end tests
+
+Verify the workflow:
+
+`Create goal → Add progress and evidence → Give feedback → Conduct review → Record employee response → Create development plan → Track milestones → Prepare career conversation`.
+

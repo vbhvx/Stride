@@ -1344,3 +1344,30 @@ Test:
 - Audit history.
 - Changes to competency-framework versions.
 
+### Development-plan tests
+
+Test:
+
+- Plan creation from a review.
+- Action ownership and due dates.
+- Milestone completion.
+- Revised plans.
+- Missing opportunities or support.
+- Development evidence.
+- Follow-up reminders.
+
+### AI tests
+
+Test:
+
+- Correct evidence retrieval.
+- Accurate summaries of known fixture data.
+- Unsupported-claim detection.
+- Missing-context disclosure.
+- Source references.
+- Prompt injection in feedback text.
+- Restricted-data access attempts.
+- Invalid AI output.
+- Human rejection and editing of AI suggestions.
+- Prevention of automatic promotion decisions.
+

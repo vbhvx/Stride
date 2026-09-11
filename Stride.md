@@ -1385,3 +1385,82 @@ Verify the workflow:
 
 `Create goal → Add progress and evidence → Give feedback → Conduct review → Record employee response → Create development plan → Track milestones → Prepare career conversation`.
 
+### Release gate
+
+The application must demonstrate a complete development cycle with transparent expectations, traceable evidence, role-based access, employee participation, and a working audit history.
+
+No AI output may independently finalize a promotion-related or other consequential employment decision.
+
+---
+
+## 19. Repository structure
+
+Use a maintainable project structure organized around meaningful domain boundaries.
+
+```text id="8dbslp"
+employee-growth-platform/
+├── src/
+│   ├── app/
+│   │   ├── dashboard/
+│   │   ├── goals/
+│   │   ├── evidence/
+│   │   ├── feedback/
+│   │   ├── coaching/
+│   │   ├── reviews/
+│   │   ├── development-plans/
+│   │   ├── career-growth/
+│   │   ├── settings/
+│   │   └── api/
+│   ├── components/
+│   │   ├── dashboard/
+│   │   ├── goals/
+│   │   ├── evidence/
+│   │   ├── feedback/
+│   │   ├── reviews/
+│   │   ├── development/
+│   │   └── ui/
+│   ├── modules/
+│   │   ├── organizations/
+│   │   ├── roles/
+│   │   ├── competencies/
+│   │   ├── goals/
+│   │   ├── evidence/
+│   │   ├── feedback/
+│   │   ├── coaching/
+│   │   ├── reviews/
+│   │   ├── development-plans/
+│   │   ├── career-growth/
+│   │   ├── ai/
+│   │   └── privacy/
+│   ├── lib/
+│   │   ├── auth/
+│   │   ├── db/
+│   │   ├── validation/
+│   │   └── observability/
+├── prisma/
+│   ├── schema.prisma
+│   ├── migrations/
+│   └── seed.ts
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
+├── docs/
+│   ├── architecture.md
+│   ├── role-framework.md
+│   ├── review-workflows.md
+│   ├── ai-governance.md
+│   ├── privacy-and-access.md
+│   └── deployment.md
+├── .env.example
+├── .gitignore
+├── Dockerfile
+├── docker-compose.yml
+├── README.md
+└── package.json
+```
+
+Adapt this structure to the existing repository. Avoid creating unnecessary modules, empty abstractions, or microservices.
+
+---
+

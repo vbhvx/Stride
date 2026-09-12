@@ -1464,3 +1464,18 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 
 ---
 
+## 20. Implementation checklist
+
+### Phase 1 — Repository inspection and role framework
+
+- Inspect the repository and existing architecture.
+- Define the initial target organization and user roles.
+- Establish the permission model.
+- Define role profiles and competency schemas.
+- Define goal and evidence models.
+- Document review states and approval responsibilities.
+- Define audit and privacy requirements.
+- Create acceptance tests.
+
+**Deliverable:** a validated architecture and documented development workflow.
+

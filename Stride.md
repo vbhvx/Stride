@@ -1479,3 +1479,27 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 
 **Deliverable:** a validated architecture and documented development workflow.
 
+### Phase 2 — Core goals and evidence
+
+- Implement authentication and organization access.
+- Create the database schema and migrations.
+- Implement goals and milestones.
+- Add progress updates.
+- Implement evidence records and links.
+- Add reviewable goal changes.
+- Build the employee dashboard.
+- Add role and ownership tests.
+
+**Deliverable:** employees can manage goals, record progress, and link evidence.
+
+### Phase 3 — Feedback and coaching
+
+- Implement feedback records.
+- Add visibility and permission controls.
+- Implement coaching sessions and follow-ups.
+- Add employee responses and corrections.
+- Build the manager workflow.
+- Test visibility, ownership, and audit events.
+
+**Deliverable:** employees and managers can conduct structured coaching conversations.
+

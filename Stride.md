@@ -1503,3 +1503,27 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 
 **Deliverable:** employees and managers can conduct structured coaching conversations.
 
+### Phase 4 — Review cycles
+
+- Implement review-cycle configuration.
+- Add employee self-reviews.
+- Add manager reviews.
+- Link assessments to role expectations and evidence.
+- Implement submit, return, finalize, and amendment workflows.
+- Preserve review versions and decision histories.
+- Build review dashboards.
+- Test disagreement and correction paths.
+
+**Deliverable:** a complete, evidence-based review process.
+
+### Phase 5 — Development and career progression
+
+- Implement development plans.
+- Add actions, milestones, and evidence requirements.
+- Implement competency-gap summaries.
+- Build career-growth views.
+- Connect review outcomes to practical development actions.
+- Test missing-evidence and changing-priority scenarios.
+
+**Deliverable:** employees can understand expectations and track concrete development activities.
+

@@ -1527,3 +1527,29 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 
 **Deliverable:** employees can understand expectations and track concrete development activities.
 
+### Phase 6 — AI-assisted development
+
+- Add authorized evidence retrieval.
+- Implement structured goal and feedback summaries.
+- Add review-draft and development-plan assistance.
+- Validate AI output and source references.
+- Add prompt-injection defenses.
+- Implement human review and rejection.
+- Evaluate output quality using versioned fixtures.
+- Verify that AI cannot finalize consequential employment decisions.
+
+**Deliverable:** useful advisory AI that is grounded, traceable, and appropriately constrained.
+
+### Phase 7 — Privacy, governance, and hardening
+
+- Review role and data-access boundaries.
+- Add export, correction, and deletion workflows.
+- Implement retention metadata.
+- Add audit-history integrity controls.
+- Test organization isolation.
+- Review AI data minimization and retention.
+- Run fairness and consistency tests.
+- Fix identified defects.
+
+**Deliverable:** a secure, reviewable platform with documented operating boundaries.
+

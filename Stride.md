@@ -1553,3 +1553,20 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 
 **Deliverable:** a secure, reviewable platform with documented operating boundaries.
 
+### Phase 8 — Deployment and handover
+
+- Run migrations and seed fixtures.
+- Execute tests, type checks, linting, and production builds.
+- Configure production secrets.
+- Deploy where access is available.
+- Verify employee and manager workflows.
+- Test access boundaries.
+- Complete documentation.
+- Provide the final implementation report.
+
+**Deliverable:** a reproducible application with verified functionality and documented limitations.
+
+---
+
+## 21. Acceptance criteria and release gates
+

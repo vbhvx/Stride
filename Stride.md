@@ -1570,3 +1570,22 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 
 ## 21. Acceptance criteria and release gates
 
+### Goal and evidence integrity
+
+- Goals have owners, success criteria, and traceable updates.
+- Evidence retains its source, author, and relevant context.
+- Missing evidence is not automatically treated as poor performance.
+- Revised goals preserve history.
+- Team contributions are not automatically attributed to a single person.
+- Evidence can be linked to relevant role expectations without silent double-counting.
+
+### Feedback and review integrity
+
+- Feedback is attributable to an author.
+- Restricted notes obey visibility rules.
+- Reviews use documented role expectations.
+- Assessments can reference supporting evidence.
+- Employees can contribute context and record disagreement.
+- Finalized reviews cannot be silently rewritten.
+- Material review changes are auditable.
+

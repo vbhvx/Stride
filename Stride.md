@@ -1589,3 +1589,19 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 - Finalized reviews cannot be silently rewritten.
 - Material review changes are auditable.
 
+### Development and career growth
+
+- Development plans contain actionable goals and milestones.
+- Skill-gap views distinguish missing evidence from demonstrated inability.
+- Career-growth summaries refer to explicit role expectations.
+- The product does not generate an opaque universal promotion score.
+- AI cannot independently approve a promotion or consequential employment decision.
+
+### Security and privacy
+
+- Organization and employee permissions are enforced server-side.
+- Unauthorized users cannot access private goals, evidence, notes, or reviews.
+- Sensitive information is minimized in AI requests and logs.
+- Retention, correction, and deletion workflows follow documented policies.
+- External integrations are optional and securely configured.
+

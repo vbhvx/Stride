@@ -1605,3 +1605,44 @@ Adapt this structure to the existing repository. Avoid creating unnecessary modu
 - Retention, correction, and deletion workflows follow documented policies.
 - External integrations are optional and securely configured.
 
+### Engineering quality
+
+- Migrations are reproducible.
+- Unit, integration, and end-to-end tests are actually run.
+- Core workflows work on mobile and desktop.
+- AI features degrade gracefully when the provider is unavailable.
+- Audit events preserve the required history.
+- Deployment and integration claims are verified.
+- Remaining gaps are explicitly documented.
+
+---
+
+## 22. README and delivery requirements
+
+The README must include:
+
+- Product purpose and target users.
+- Screenshots of the working application.
+- Architecture overview.
+- Technology stack.
+- Repository structure.
+- Local setup and environment configuration.
+- Database migration and seed instructions.
+- User roles and access boundaries.
+- Role and competency framework.
+- Goal, evidence, feedback, and review workflows.
+- Development-plan behavior.
+- AI features and their limitations.
+- Audit and data-retention policy.
+- Privacy and security controls.
+- Test execution instructions.
+- Deployment and recovery guidance.
+- Known limitations.
+- Applicable legal or governance questions requiring review.
+
+Never commit real employee records, sensitive feedback, private HR documents, or production credentials.
+
+Do not claim legal compliance or proven fairness solely because role frameworks, audit events, or human review controls exist.
+
+---
+

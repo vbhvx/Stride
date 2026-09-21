@@ -1646,3 +1646,11 @@ Do not claim legal compliance or proven fairness solely because role frameworks,
 
 ---
 
+## 23. Risks that could invalidate the result
+
+### Subjective or inconsistent criteria
+
+A standardized form cannot eliminate inconsistency if expectations are vague or managers interpret them differently.
+
+**Mitigation:** Define role-relevant observable expectations, preserve evidence, document assessment rationale, and review consistency across teams.
+

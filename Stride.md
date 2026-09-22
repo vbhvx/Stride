@@ -1654,3 +1654,15 @@ A standardized form cannot eliminate inconsistency if expectations are vague or 
 
 **Mitigation:** Define role-relevant observable expectations, preserve evidence, document assessment rationale, and review consistency across teams.
 
+### Missing evidence treated as poor performance
+
+Some employees receive fewer high-visibility assignments or lack opportunities to demonstrate specific competencies.
+
+**Mitigation:** Distinguish evidence gaps from negative findings and document relevant opportunity, scope, and resource constraints.
+
+### AI-generated bias or unsupported judgments
+
+A language model may reproduce biased wording, overgeneralize from a single event, or invent a plausible explanation.
+
+**Mitigation:** Ground outputs in authorized evidence, use explicit criteria, evaluate system behavior, and keep consequential judgments under human control.
+

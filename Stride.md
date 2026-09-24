@@ -1666,3 +1666,15 @@ A language model may reproduce biased wording, overgeneralize from a single even
 
 **Mitigation:** Ground outputs in authorized evidence, use explicit criteria, evaluate system behavior, and keep consequential judgments under human control.
 
+### Opaque career progression
+
+Employees cannot act on a vague assessment that says they are not ready without explaining what evidence or capability is missing.
+
+**Mitigation:** Present target-role expectations, relevant evidence, unresolved gaps, and actionable development steps.
+
+### Unfair numerical rankings
+
+A composite score can obscure contextual differences between roles and reward easily measured activity over meaningful contributions.
+
+**Mitigation:** Avoid a universal employee score and use transparent, role-relevant evidence.
+

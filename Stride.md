@@ -1678,3 +1678,15 @@ A composite score can obscure contextual differences between roles and reward ea
 
 **Mitigation:** Avoid a universal employee score and use transparent, role-relevant evidence.
 
+### Privacy and surveillance
+
+Unnecessary employee data can expose sensitive information and undermine trust.
+
+**Mitigation:** Apply purpose limitation, data minimization, role-based access, transparency, and controlled retention.
+
+### Historical review rewriting
+
+Changing a role framework or editing a finalized review may make it impossible to reconstruct earlier decisions.
+
+**Mitigation:** Preserve framework versions, version finalized reviews, and audit material amendments.
+

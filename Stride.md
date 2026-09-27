@@ -1690,3 +1690,67 @@ Changing a role framework or editing a finalized review may make it impossible t
 
 **Mitigation:** Preserve framework versions, version finalized reviews, and audit material amendments.
 
+### Overengineering
+
+Building extensive AI analytics before basic goals, feedback, and evidence workflows are correct can undermine the product.
+
+**Mitigation:** Complete the evidence-backed development cycle first and add AI capabilities incrementally.
+
+---
+
+## 24. Required final report
+
+At the end of implementation, provide:
+
+1. Summary of the implemented platform.
+2. Final architecture and repository structure.
+3. Supported employee and manager workflows.
+4. Role and competency framework.
+5. Goal and evidence data model.
+6. Feedback and coaching functionality.
+7. Review-cycle and amendment behavior.
+8. Development-plan and career-growth capabilities.
+9. AI features, evidence grounding, and limitations.
+10. Privacy, access control, and audit behavior.
+11. Fairness and consistency checks performed.
+12. Tests actually executed and their results.
+13. Type-check, lint, build, and end-to-end test results.
+14. Local setup and environment configuration.
+15. Verified deployment URL, if available.
+16. Known limitations and unresolved governance requirements.
+17. A prioritized list of future engineering tasks.
+
+Distinguish implemented features from tested behaviors and organizational policies that still require review.
+
+Do not claim that the system produces objectively correct performance evaluations, eliminates bias, predicts promotions reliably, or satisfies all employment laws without appropriate supporting evidence.
+
+---
+
+## 25. Final execution instruction
+
+Start by inspecting the existing repository and identifying the actual workflow, permission model, and development environment.
+
+Build the smallest complete vertical slice first:
+
+**Define expectations → Create a goal → Record progress and evidence → Provide feedback → Review progress → Agree on a development plan → Track follow-up.**
+
+Then add review cycles, structured career conversations, competency-gap views, and AI assistance in independently testable phases.
+
+Use explicit role expectations and evidence. Make employee participation a first-class part of the workflow. Preserve review history. Treat missing context as uncertainty rather than automatically assigning blame. Keep AI advisory and require accountable human decisions for consequential employment outcomes.
+
+When a feature depends on an organizational policy, legal requirement, or unavailable integration, record that dependency rather than inventing a universal rule.
+
+**The fundamental architecture is:**
+
+- Role profiles define expectations.
+- Goals translate expectations into development objectives.
+- Evidence records what was actually observed or delivered.
+- Feedback and coaching help people understand and improve their work.
+- Reviews connect evidence to documented expectations.
+- Development plans turn identified needs into practical actions.
+- Career conversations explain growth opportunities and remaining evidence gaps.
+- AI organizes evidence and suggests next steps without becoming the final authority.
+- Security, privacy, and audit controls preserve access boundaries and accountability.
+- Employees and managers remain active participants in the development process.
+
+Build a transparent, maintainable employee-development platform that replaces fragmented impressions with structured evidence and practical coaching—helping employees understand how they can grow and helping managers make clearer, more consistent, and more accountable development decisions.

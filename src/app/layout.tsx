@@ -6,6 +6,14 @@ import { Sidebar } from "@/components/layout/Sidebar";
 export const metadata: Metadata = {
   title: "Stride — Employee Growth, Coaching & Career Progression Platform",
   description: "Consolidate goals, work evidence, feedback, and career growth expectations into a transparent, evidence-based workspace.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
